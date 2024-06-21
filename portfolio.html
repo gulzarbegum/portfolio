@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .bg{
+           background: url('download.gif') no-repeat;
+           background-position:26cqmax;
+            
+        }
+    
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .container{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            font-size: 28px;
+        }
+        .title{
+            padding: 30px;
+            font-family:  'Brush Script MT', cursive;;
+            font-size: 30px;
+            transition: .2s;
+            
+        }
+
+        li{
+            padding: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .2s
+        }
+
+        nav a:hover {
+            color: #973C61;
+        }
+
+        .home{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            
+        }
+        .home-content{
+            max-width: 600px;
+        }
+        .home-content h1{
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .home-content h3{
+            font-size: 32px;
+            font-weight: 600;
+            color: #973C61;
+            line-height: 1;
+        }
+        .home-content p{
+            font-size: 16px;
+        }
+        .home-content .btn-box{
+            display: flex;
+            width: 160px;
+            height: 50px;
+            
+        }
+        .btn-box a{
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 160px;
+            height: 100%;
+            border: 2px solid #3d071d;
+            border-radius: 10px;
+            font-size: 19px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .btn-box a:nth-child(1) {
+            background: transparent;
+            
+        }
+        .btn-box a:nth-child(1){
+            color: #3d071d;
+        }
+        .btn-box a::before{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #97556f;
+            z-index: -1;
+            transition: .2s;
+
+        }
+        .btn-box a:hover::before{
+            width: 100%;
+
+        }
+        .home-icon{
+            align-items: center;
+            padding-left: 7cap;
+            position: absolute;
+            bottom: -1030px;
+            width: 170px;
+            display: flex;
+            justify-content: space-between;
+            line-height: 1;
+        }
+        .home-icon a {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #130108;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #97556f;
+            text-decoration: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .home-icon a:hover{
+            color: #3d071d;
+        }
+
+        .home-icon a::before{
+            content: '';
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #97556f;
+            z-index: -1;
+            transition: .2s;
+        }
+
+        .home-icon a:hover::before{
+            width: 100%;
+
+        }
+
+        footer{
+            background-color: #4f3d44;
+        }
+
+        .content {
+            width: 100%;
+            padding: 110px 30px 10px;
+            justify-content: center;
+            display: flex;
+
+        }
+
+        .footer-bottom{
+            color: #3d071d;
+          
+        }
+
+
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+
+        .slideshow-container {
+        max-width: 800px;
+        position: relative;
+        margin: auto;
+        }
+
+        .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active {
+        background-color: #717171;
+        }
+
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+        }
+
+        .ab{
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .ab-content h1{
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .ab-content h3{
+            font-size: 32px;
+            font-weight: 600;
+            color: #973C61;
+            line-height: 1;
+        }
+
+        .visit{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 10px;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    <main class="bg">
+            <div class="container">
+                <a href="#" class="title">
+                    Gulzar Begum
+                </a>
+                <nav>
+                <ul>
+                    <li><a href="portfolio.html">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Connect">Connect</a></li>
+                </ul>
+                </nav>
+            </div>
+        <section id="home" class="home">
+            <div class="home-content">
+                <h1>Hey!, This is Gulzar Begum.</h1>
+                <h3>A Computer Science Engineering Student.</h3>
+                <br>
+                <p>I am a dedicated Computer Science Engineering Student with specialisation of IoT & Cyber Security including Blockchain Technology.
+                    I would like Learn and implement things that improve my knowledge.I am seeking for a better expience to improve in my relevant skills.
+                </p>
+                <br>
+                <div class="btn-box">
+                    <a href="#">connect with me</a>
+                </div>
+            </div>
+           
+        </section>        
+    </main>
+    <section id="About"> 
+        <div class="ab"> 
+            <div class="ab-content"> 
+                <h1 style="font-size: 56px;"><u>About</u></h1>
+                <br>
+                <h3>My Certifications</h3>
+            </div>
+        </div>
+            <br>
+            <br>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                <img src="cerf1.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                <img src="cerf2.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                <img src="cerf5.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="cerf4.jpg" style="width:100%">
+                </div>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span>
+                </div>
+    </section>
+
+    <br>
+    <br>
+    
+    
+    <section id="Connect">
+        <div class="visit"> 
+         <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=ce38bfa61e2b4074ea6681d21353d1741cf1c72a'></script>
+            <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1195527/t/4"></script>
+        <div id="sfcjpc2phx5dehbqkbcjare181z1q4hz45f">            <script type="text/javascript" src="https://counter4.optistats.ovh/private/counter.js?c=jpc2phx5dehbqkbcjare181z1q4hz45f&down=async" ></script>
+            <noscript><a href="https://www.freecounterstat.com" title="free web counter"><img src="https://counter4.optistats.ovh/private/freecounterstat.php?c=jpc2phx5dehbqkbcjare181z1q4hz45f" border="0" title="free web counter" alt="free web counter"></a></noscript>
+        </div>
+        </div>
+            <footer class="content">
+            <center>
+            <div class="home-icon">
+                <a href="https://t.me/Gul1234567zar"><i class='bx bxl-telegram'></i></a>
+                <a href="https://medium.com/@gul19790205"><i class='bx bxl-medium-old' ></i></a>
+                <a href="https://www.linkedin.com/in/gulzar-begum-36b638255/"><i class='bx bxl-linkedin' ></i></a>
+            </div>
+            </center>
+            <center>
+            <div class="footer-bottom">
+                <p> copyright &copy;2024; Designed by <span class="designer"><u> GULZAR-BEGUM. </u></span> </p>
+            </div>
+            </center>
+        </footer>
+    </section>
+
+        <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); 
+        }
+        </script>
+
+</body>
+</html>
